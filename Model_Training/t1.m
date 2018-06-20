@@ -1,0 +1,19 @@
+data
+
+f = fit(pix_train, dis_train, 'exp2');
+
+plot(f, pix_train, dis_train);
+title('distance/m against size in pixel values');
+xlabel('Car size in pixel velues/number of pixels');
+ylabel('Real world distance/m');
+grid on;
+
+pre = (f.a.*exp(f.b.*pix_train)+ f.c.*exp(f.d.*pix_train));
+error = abs(dis_train - pre);
+
+mean(error)
+
+pre = (f.a.*exp(f.b.*pix_test)+ f.c.*exp(f.d.*pix_test));
+error_t = abs(dis_test - pre);
+
+mean(error_t)
