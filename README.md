@@ -12,17 +12,16 @@ This Repository is modified from (https://github.com/qqwweee/keras-yolo3)
 
 ## Yolo network initiallisation
 
-1. Download YOLOv3 weights from [YOLO website](http://pjreddie.com/darknet/yolo/).
+1. Download YOLOv3 weights from [YOLO website](http://pjreddie.com/darknet/yolo/), and put the weights file into the project head folder
 2. Convert the Darknet YOLO model to a Keras model.
 
 ```
-wget https://pjreddie.com/media/files/yolov3.weights
-python convert.py yolov3.cfg yolov3.weights model_data/yolo.h5
+python3 convert.py yolov3.cfg yolov3.weights model_data/yolo.h5
 ```
 
 ---
 
-## Usage
+## To Run the Demo
 
 1. Setting input and output
 In yolo_video.py, set the input video path and output path
@@ -38,6 +37,8 @@ For example, if speed need to be calculated every 2 seconds,
 then change Change
 count % 30 == 0 to count % 60 == 0
 
+4, Run yolo_video.py
+
 4. To detect only an image,
 Run yolo.py
 
@@ -45,7 +46,7 @@ Run yolo.py
 
 ---
 
-## Some issues to know
+## Issues
 
 1. The test environment is
     - Python 3.6.3
