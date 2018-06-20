@@ -10,7 +10,7 @@ This Repository is modified from (https://github.com/qqwweee/keras-yolo3)
 
 ---
 
-## Yolo network initiallisation
+## Yolo network initialisation
 
 1. Download YOLOv3 weights from [YOLO website](http://pjreddie.com/darknet/yolo/), and put the weights file into the project head folder
 2. Convert the Darknet YOLO model to a Keras model.
